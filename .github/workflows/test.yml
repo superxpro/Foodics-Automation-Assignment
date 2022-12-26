@@ -182,4 +182,3 @@ jobs:
         with:
           name: ${{ runner.os }} - Desktop Browsers Tests Extent Report
           path: "Automation-Assignment/extent-reports/ExtentReports_*.html"
-	
