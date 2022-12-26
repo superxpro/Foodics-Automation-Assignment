@@ -91,7 +91,7 @@ I created three test cases using the following endpoints:
 -   [https://pay.foodics.dev/public-api/v1/App/Login](https://pay.foodics.dev/public-api/v1/App/Login)
 -   [https://pay.foodics.dev/public-api/v1/App/GetMerchantInfo](https://pay.foodics.dev/public-api/v1/App/GetMerchantInfo)
 
-I read the credentials for the login API from an Excel file. The username is "[omarfoodics2+test2@gmail.com](mailto:omarfoodics2+test2@gmail.com)" and the password is "sk190517225LM@$*".
+I read the credentials for the login API from an Excel file.
 
 
 #### Why using Shaft 
