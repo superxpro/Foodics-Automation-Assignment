@@ -22,8 +22,6 @@ public class LoginTest {
     @Test(priority=1,description = "Foodics Login API - Valid User Signin")
     @Description("When I Signin with an already signed up user, Then I should Signin successfully")
     @Severity(SeverityLevel.BLOCKER)
-    @TmsLink("Test_case 1")
-    @Issue("Software_bug")
     public void testLogin() throws IOException {
 
         // Create a JSON object with the login credentials
@@ -59,8 +57,6 @@ public class LoginTest {
     @Test(priority=2,description = "Foodics Get Merchant Info API - Get Request With JWT Token")
     @Description(" Verify successful retrieval of merchant info ")
     @Severity(SeverityLevel.CRITICAL)
-    @TmsLink("Test_case 2")
-    @Issue("Software_bug")
     public void testGetMerchantInfo() {
 
         // Get the saved JWT token
@@ -79,6 +75,26 @@ public class LoginTest {
         String merchantName = response.jsonPath().getString("name");
         assert merchantName != null;
     }
+
+    @Test(priority=3,description = "Check that user is Not Authorized to Retrieve Any Data Without The JWT Token")
+    @Description("Check that user is Not Authorized to Retrieve Any Data Without The JWT Token")
+    @Severity(SeverityLevel.CRITICAL)
+    public void testUnAuthorizedCase() {
+
+        // Send a GET request to the merchant info API without the JWT token
+        Response response = given().baseUri(foodicsApis.getBaseUrl())
+                .contentType(ContentType.JSON)
+                .when().get(foodicsApis.getMERCHANT_INFO_URL());
+
+        // Verify the response status code
+        assertEquals(401, response.getStatusCode());
+
+        // Verify that the response body not contains the expected merchant info
+        String merchantName = response.jsonPath().getString("name");
+        assert merchantName == null;
+    }
+
+
 
     // Function to get the saved JWT token
     private String getSavedJwtToken() {

@@ -21,7 +21,7 @@ public class AmazonTests {
     @Description("Check that the Side Menu is Displayed")
     @Test
     public void checkSideMenu() {
-        AllVideGamesPage.emptyTheCartBeforeTest();
+       // AllVideGamesPage.emptyTheCartBeforeTest();
         AmazonHomePage.openTheSideMenu();
         Validations.verifyThat()
                 .element(driver, AmazonHomePage.getAllSideMenu_icon())
@@ -54,7 +54,7 @@ public class AmazonTests {
         Validations.verifyThat()
                 .element(driver, PasswordPage.getHello_message())
                 .text()
-                .contains("Sara")
+                .contains("Alaa")
                 .withCustomReportMessage("User Is Logged In Successfully")
                 .perform();
     }

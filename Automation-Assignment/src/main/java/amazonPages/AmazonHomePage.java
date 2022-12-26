@@ -112,12 +112,13 @@ public class AmazonHomePage {
 
     public static boolean isNavBarDisplayed(){
         boolean navBarDisplayed = driver.findElement(nav_Bar).isDisplayed();
+        System.out.println(navBarDisplayed);
         return navBarDisplayed;
     }
 
     public static void refreshThePage(){
         if(!isNavBarDisplayed()){
-            BrowserActions.refreshCurrentPage(driver);
+
         }
     }
 

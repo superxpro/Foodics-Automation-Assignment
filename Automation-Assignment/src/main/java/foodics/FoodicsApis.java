@@ -29,8 +29,8 @@ public class FoodicsApis {
     private  final String LOGIN_URL = "/Login";
     private  final String MERCHANT_INFO_URL = "/GetMerchantInfo";
     private  final String baseUrl = "https://pay.foodics.dev/public-api/v1/App";
-    private  final String file = "src/test/resources/LoginTestData/Foodics_Login_TestData.xlsx";
-    String[] loginCredentials = readExcelFile("src/test/resources/LoginTestData/Foodics_Login_TestData.xlsx");
+    private  final String file = "src/test/resources/TestDataFiles/Foodics_Login_TestData.xlsx";
+    String[] loginCredentials = readExcelFile("src/test/resources/TestDataFiles/Foodics_Login_TestData.xlsx");
 
     private String username = loginCredentials[0];
     private String password = loginCredentials[1];
