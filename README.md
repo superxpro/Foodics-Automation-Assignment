@@ -23,14 +23,18 @@ To run the scripts, you will need the following tools and libraries:
 - [Shaft Engine](https://github.com/ShaftHQ/SHAFT_ENGINE) (for Java)
 -   [Rest Assured](http://rest-assured.io/) (for testing the REST API)
 - [Docker](https://docs.docker.com/compose/install/) (Run Selenium Tests on Chrome Inside the Docker Container) 
-> **While Building These Tasks:** I Applied **Page Object Model** and **Anonymous Fluent POMs** and Also while dealing with Elements I applied **Fluent Element Actions**.
+
+## Design implementation:
+- **Page Object Model** 
+- **Anonymous Fluent POMs** 
+- **Fluent Element Actions**
 
 ## Running the Selenium scripts
 
 To run the Selenium scripts, follow these steps:
 
 1.  Clone this repository to your local machine.
-2.  Navigate to the `Amazon-task` directory.
+2.  Navigate to the `Automation-Assignment` directory.
 3.  Build the project using the following command:
 
 `mvn clean install` 
@@ -52,7 +56,7 @@ This will run the tests and generate an Allure report in the `target/allure-repo
 To run the REST API scripts, follow these steps:
 
 1.  Clone this repository to your local machine.
-2.  Navigate to the `Foodics-api-task` directory.
+2.  Navigate to the `Automation-Assignment` directory.
 3.  Run the tests using the following command:
 
 `mvn clean test` 
