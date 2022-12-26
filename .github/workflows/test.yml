@@ -9,8 +9,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  GUI_Web:
-    name: Run GUI_Web Tests
+  Automation-Assignment:
+    name: Run Automation-Assignment Tests
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -125,8 +125,8 @@ jobs:
           name: ${{ runner.os }} - Desktop Browsers Tests Extent Report
           path: "Automation-Assignment/extent-reports/ExtentReports_*.html"
           
-  GUI_Web_Cucumber:
-    name: Run GUI_Web_Cucumber Tests
+  Automation-Assignment_Cucumber:
+    name: Run Automation-Assignment_Cucumber Tests
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -153,7 +153,7 @@ jobs:
         if: runner.os != 'Windows'
         continue-on-error: true
         run: |
-          cd GUI_Web_Cucumber/
+          cd Automation-Assignment_Cucumber/
           if [ "$RUNNER_OS" == "Linux" ]; then
                mvn test -DexecutionAddress="localhost:4444" -DtargetOperatingSystem="Linux-64" -DmaximumPerformanceMode="2" -DtargetBrowserName="GoogleChrome" -DgenerateAllureReportArchive="true" -Dtest=".*CucumberTestRunner.*"
           elif [ "$RUNNER_OS" == "macOS" ]; then
@@ -166,7 +166,7 @@ jobs:
         if: runner.os == 'Windows'
         continue-on-error: true
         run: |
-          cd GUI_Web_Cucumber/
+          cd Automation-Assignment_Cucumber/
           mvn test -DexecutionAddress="local" -DtargetOperatingSystem="Windows-64" -DmaximumPerformanceMode="2" -DtargetBrowserName="MicrosoftEdge" -DgenerateAllureReportArchive="true" -Dtest=".*CucumberTestRunner.*"
 
       - name: Upload Allure Report as Pipeline Artifact
