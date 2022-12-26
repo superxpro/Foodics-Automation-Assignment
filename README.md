@@ -12,7 +12,7 @@ This repository contains automation scripts for two tasks:
 
 ## Prerequisites
 
-To run the scripts, you will need the following tools and libraries:
+To The main Frameworks included in the project:
 
 -   [Java](https://www.java.com/en/download/) (version 8 or higher)
 -   [Maven](https://maven.apache.org/install.html) (for building and running the Selenium scripts)
@@ -20,9 +20,11 @@ To run the scripts, you will need the following tools and libraries:
 -   [Allure](https://docs.qameta.io/allure/#_installing_a_commandline) (for generating the test reports for the Selenium scripts)
 -   [Selenium](https://www.selenium.dev/downloads/) (for automating the web browser)
 -   [Extent Reports](https://extentreports.com/docs/versions/4/java/) (for generating the test reports for the Selenium scripts)
-- [Shaft Engine](https://github.com/ShaftHQ/SHAFT_ENGINE) (for Java)
+-   [Shaft Engine](https://github.com/ShaftHQ/SHAFT_ENGINE) (for Java)
 -   [Rest Assured](http://rest-assured.io/) (for testing the REST API)
-- [Docker](https://docs.docker.com/compose/install/) (Run Selenium Tests on Chrome Inside the Docker Container) 
+-   [Docker](https://docs.docker.com/compose/install/) (Run Selenium Tests on Chrome Inside the Docker Container) 
+-   [Github Actions](https://github.com/features/actions) (For CI/CD)
+-   [Apachi poi](https://poi.apache.org/) (For Dealing with Excel Files)
 
 ## Design implementation:
 - **Page Object Model** 
