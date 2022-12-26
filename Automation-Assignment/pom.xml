@@ -8,7 +8,7 @@
     <artifactId>Automation-Assignment</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-             <!-- Cooment 1-->
+             <!-- Cooment 2-->
         <!-- Make sure you point to the latest release version: https://github.com/ShaftHQ/SHAFT_ENGINE/releases -->
         <shaft_engine.version>6.4.20221215</shaft_engine.version>
     </properties>
