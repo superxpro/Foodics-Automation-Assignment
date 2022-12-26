@@ -23,6 +23,7 @@ To run the scripts, you will need the following tools and libraries:
 - [Shaft Engine](https://github.com/ShaftHQ/SHAFT_ENGINE) (for Java)
 -   [Rest Assured](http://rest-assured.io/) (for testing the REST API)
 - [Docker](https://docs.docker.com/compose/install/) (Run Selenium Tests on Chrome Inside the Docker Container) 
+> **While Building These Tasks:** I Applied **Page Object Model** and **Anonymous Fluent POMs** and Also while dealing with Elements I applied **Fluent Element Actions**.
 
 ## Running the Selenium scripts
 
@@ -109,3 +110,4 @@ Due to a known issue with IntelliJ you need to edit your run configuration templ
 ## Authors
 
 -   **Alaa Emad** 
+
