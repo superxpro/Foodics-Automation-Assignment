@@ -37,7 +37,7 @@ jobs:
         if: runner.os != 'Windows'
         continue-on-error: true
         run: |
-          cd GUI_Web/
+          cd Automation-Assignment/
           if [ "$RUNNER_OS" == "Linux" ]; then
                mvn test -DexecutionAddress="localhost:4444" -DtargetOperatingSystem="Linux-64" -DmaximumPerformanceMode="2" -DtargetBrowserName="GoogleChrome"
           elif [ "$RUNNER_OS" == "macOS" ]; then
@@ -50,7 +50,7 @@ jobs:
         if: runner.os == 'Windows'
         continue-on-error: true
         run: |
-          cd GUI_Web/
+          cd Automation-Assignment/
           mvn test -DexecutionAddress="local" -DtargetOperatingSystem="Windows-64" -DmaximumPerformanceMode="2" -DtargetBrowserName="MicrosoftEdge" -DgenerateAllureReportArchive="true" -Dtest=".*TestClass.*"
 
       - name: Upload Allure Report as Pipeline Artifact
@@ -58,17 +58,17 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ runner.os }} - Desktop Browsers Tests Allure Report
-          path: "GUI_Web/generatedReport_*.zip"
+          path: "Automation-Assignment/generatedReport_*.zip"
 
       - name: Upload Extent Report as Pipeline Artifact
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: ${{ runner.os }} - Desktop Browsers Tests Extent Report
-          path: "GUI_Web/extent-reports/ExtentReports_*.html"
+          path: "Automation-Assignment/extent-reports/ExtentReports_*.html"
           
-  GUI_Web_Basic:
-    name: Run GUI_Web_Basic Tests
+  Automation-Assignment:
+    name: Run Automation-Assignment Tests
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -95,7 +95,7 @@ jobs:
         if: runner.os != 'Windows'
         continue-on-error: true
         run: |
-          cd GUI_Web_Basic/
+          cd Automation-Assignment/
           if [ "$RUNNER_OS" == "Linux" ]; then
                mvn test -DexecutionAddress="localhost:4444" -DtargetOperatingSystem="Linux-64" -DmaximumPerformanceMode="2" -DtargetBrowserName="GoogleChrome" -DgenerateAllureReportArchive="true" -Dtest=".*BasicTestClass.*"
           elif [ "$RUNNER_OS" == "macOS" ]; then
@@ -108,7 +108,7 @@ jobs:
         if: runner.os == 'Windows'
         continue-on-error: true
         run: |
-          cd GUI_Web_Basic/
+          cd Automation-Assignment/
           mvn test -DexecutionAddress="local" -DtargetOperatingSystem="Windows-64" -DmaximumPerformanceMode="2" -DtargetBrowserName="MicrosoftEdge" -DgenerateAllureReportArchive="true" -Dtest=".*BasicTestClass.*"
 
       - name: Upload Allure Report as Pipeline Artifact
@@ -116,7 +116,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ runner.os }} - Desktop Browsers Tests Allure Report
-          path: "GUI_Web_Basic/generatedReport_*.zip"
+          path: "Automation-Assignment/generatedReport_*.zip"
 
       - name: Upload Extent Report as Pipeline Artifact
         if: always()
@@ -182,3 +182,4 @@ jobs:
         with:
           name: ${{ runner.os }} - Desktop Browsers Tests Extent Report
           path: "Automation-Assignment/extent-reports/ExtentReports_*.html"
+	
